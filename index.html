@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>PWTweetAR</title>
+    <style>body { margin: 0; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> -->
+  </head>
+  <body>
+    <!-- Attachment point for your app -->
+    <div id="container"></div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script> -->
+    <script src="./client.bundle?platform=vr"></script>
+    <script>
+      // Initialize the React 360 application
+      React360.init(
+        'index.bundle?platform=vr&dev=true',
+        document.getElementById('container'),
+        {
+          assetRoot: 'static_assets/',
+        }
+      );
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2053162-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2053162-2');
+    </script>
+  </body>
+</html>
+
